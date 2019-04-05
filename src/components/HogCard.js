@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 export default class HogCard extends Component {
-    requireImage(path){
-        return require(`${path}`)
+    requireImage = (path)=>{
+        let img =  require(`../hog-imgs/${path}`)
+        return img
     }
   render() {
       const {name, specialty, greased, weight, medal} = this.props.hog
